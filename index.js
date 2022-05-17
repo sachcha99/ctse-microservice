@@ -13,7 +13,7 @@ app.use(express.json());
 connectDB();
 
 app.get("/", (req, res) => {
-    res.send("Hello Node!");
+    res.send("CTSE-User-Microservice");
 });
 
 app.use("/user", UserAPI());
