@@ -47,8 +47,6 @@ const validateUser = async (req, res) => {
         } else {
             if (users == null) return res.status(500).send("User Not Found");
             bcrypt.compare(req.body.password, users.password, function (err, result) {
-                // result == true
-                console.log(result);
                 if (result) {
                     console.log(users);
                     res.send(users);
